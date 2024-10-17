@@ -6,7 +6,7 @@ public class UserDataApp {
     int indexCount = 0;
    UserService userService = new UserService();
 
-   public boolean addUser(String username, String password, String email) {
+   public boolean addUser(int userId,String firstname, String lastname, String email) {
 
        boolean insertStatus = false;
        boolean isValid = userService.doEmailDomainVerification(email);
@@ -61,7 +61,7 @@ public class UserDataApp {
 
        UserDataApp app = new UserDataApp();
 
-       boolean isInserted = app.addUser("rahul","kumar","rahul@yahoo.com");
+       boolean isInserted = app.addUser(101,"rahul","kumar","rahul@yahoo.com");
        System.out.println(isInserted);// should print false;
 
         // also write case to print true;
